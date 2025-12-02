@@ -36,8 +36,8 @@ const config: Config = {
       },
       keyframes: {
         pulseSoft: {
-          "0%, 100%": { opacity: 0.7, transform: "scale(1)" },
-          "50%": { opacity: 1, transform: "scale(1.04)" }
+          "0%, 100%": { opacity: "0.7", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.04)" }
         },
         floatSlow: {
           "0%, 100%": { transform: "translateY(0px)" },
