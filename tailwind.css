@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #05060a;
+    --bg-surface: #0a0f1f;
+  }
+
+  body {
+    @apply bg-[radial-gradient(circle_at_top,_#05060a_0,_#02030a_45%,_#000000_100%)] text-slate-100 antialiased;
+  }
+}
+
+@layer components {
+  .glass-bg {
+    @apply bg-surface/60 border border-white/5 backdrop-blur-deep-blur;
+  }
+
+  .glow-on-hover {
+    @apply transition-shadow duration-500 hover:shadow-neon-shadow;
+  }
+}
+
+
