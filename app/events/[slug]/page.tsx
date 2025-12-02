@@ -60,9 +60,9 @@ type EventSlug = keyof typeof EVENT_DATA;
 export default function EventDetailPage({
   params
 }: {
-  params: { slug: EventSlug };
+  params: { slug: string };
 }) {
-  const event = EVENT_DATA[params.slug];
+  const event = EVENT_DATA[params.slug as EventSlug];
 
   if (!event) {
     notFound();
