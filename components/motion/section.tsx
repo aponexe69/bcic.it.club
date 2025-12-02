@@ -1,5 +1,7 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const fadeUp = {
@@ -11,7 +13,7 @@ export function SectionReveal({
   children,
   className
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
