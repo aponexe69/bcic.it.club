@@ -11,10 +11,12 @@ const fadeUp = {
 
 export function SectionReveal({
   children,
-  className
+  className,
+  id
 }: {
   children: ReactNode;
   className?: string;
+  id?: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-10% 0px -10% 0px" });
@@ -22,6 +24,7 @@ export function SectionReveal({
   return (
     <motion.section
       ref={ref}
+      id={id}
       className={cn("relative", className)}
       variants={fadeUp}
       initial="hidden"
